@@ -1,4 +1,4 @@
-#Python Practice Problems
+# Python Practice Problems
 
 This repo contains some sample Python problems pulled from various sources of Python courses.
 The repo is divded by the general difficulty of the problem. Each program will begin by first re-stating the problem, then followed by my attempt at solving the problem.
