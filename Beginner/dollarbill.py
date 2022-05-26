@@ -26,4 +26,4 @@ def dollar_to_tower(thk,h):
 	print('There are',bill_height/thk,'bills in the stack')
 	print('The final height of the stack is',bill_height)
 
-dollar_to_tower(dollar_bill_thickness,tower_height)
+dollar_to_tower(dollar_bill_thickness,tower_height) # comment added by the ZUK
