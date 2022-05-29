@@ -27,3 +27,10 @@ What is your last name?
 % Welcome to hell, John Doe, we hope you enjoy your stay!
 
 '''
+
+def name():
+    first_name = input("What is your first name? ").strip().capitalize()
+    last_name = input("What is your last name? ").strip().capitalize()
+    print("Welcome to hell,", first_name, last_name, "we hope you enjoy your stay!")
+
+name()

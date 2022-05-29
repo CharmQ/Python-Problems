@@ -56,3 +56,35 @@ Part 5
 While you’re at it, fix the program to correct for the overpayment that occurs in the last month.
 
 '''
+
+def mortage(extra_payment_start_month, extra_payment_end_month, extra_payment, principal_amt = 500000, rate = .05, monthly = 2684.11):
+    rate /= 12.0
+    running_tot = 0
+    month_counter = 0
+
+    print("Currently Paid\t\t\tRemaining Principal")
+
+    while principal_amt > 0:
+
+        month_counter+=1
+
+        if month_counter == extra_payment_start_month:
+            monthly += extra_payment
+
+        elif month_counter == extra_payment_end_month + 1:
+            monthly -= extra_payment
+
+        running_tot+=monthly
+
+        principal_amt = principal_amt - (monthly - rate*principal_amt)
+
+        if principal_amt < 0:
+            running_tot -= abs(principal_amt) 
+            principal_amt = 0
+
+        print("{arg:.2f}".format(arg=running_tot), "\t\t\t{arg:.2f}".format(arg=principal_amt))
+
+    print("Total Paid:", "${arg:.2f}".format(arg=running_tot))
+    print("Months:", month_counter)
+
+mortage(61, 108, 1000)
