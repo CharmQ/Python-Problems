@@ -41,3 +41,30 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 '''
 
+def roman():
+	s = str(input('s ='))
+	n = 0
+	roman = {'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
+	if s.find('IV') > -1:
+		s = s.replace('IV','')
+		n = n + 4
+	if s.find('IX') > -1:
+		s = s.replace('IX','')
+		n = n + 9
+	if s.find('XL') > -1:
+		s = s.replace('XL','')
+		n = n + 40
+	if s.find('XC') > -1:
+		s = s.replace('XC','')
+		n = n + 90
+	if s.find('CD') > -1:
+		s = s.replace('CD','')
+		n = n + 400
+	if s.find('CM') > -1:
+		s = s.replace('CM','')
+		n = n + 900
+	for i in range(len(s)):
+		n = n + int(roman[s[i]])
+	print(n)
+
+roman()
